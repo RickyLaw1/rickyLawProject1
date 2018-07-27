@@ -1,0 +1,315 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0;}
+
+/* General Styling */
+.wrapper {
+    max-width: 1335px;
+    margin: 0 auto;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, blockquote {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: 5.8rem;
+    text-align: center;
+    margin: 0;
+}
+h2 {
+    font-size: 4.8rem;
+}
+h3 {
+    font-size: 1.6rem;
+    color: #999999;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-weight: 400;
+}
+h4 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #999999;
+    line-height: 2.15;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style-type: none;
+}
+img {
+    max-width: 100%;
+}
+blockquote {
+    font-size: 2.5rem;
+    color: #333333;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+
+/* Header Section Begins */
+header .top {
+    margin: 0 auto;
+}
+header .top .wrapper {
+    position: relative;            
+}
+header h1 {
+    text-align: center;
+    padding: 50px;
+}
+header nav {
+    font-size: 1.4rem;
+    width: 33.33%;
+}
+header nav.left {
+    float: left;
+}
+header nav.right {
+    float: right;
+}
+header ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header nav.right ul {
+    right: 0;
+}
+header li {
+    display: inline-block;
+}
+header nav.left li:nth-child(2) {
+    margin: 0 65px;
+}
+header nav.right li {
+    margin: 0 15px;
+}
+header .shopping {
+    position: relative;
+}
+header .shopping .number {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    padding: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    background-color: #a5f1dd;
+}
+header .banner {
+    height: 100vh;
+    background-image: url(../../assets/home-1.jpeg);
+    background-size: cover;
+}
+
+
+
+/* Main Begins */
+
+/* About Section Begins */
+section.about {
+    background-color: #eeeeee;
+    padding: 200px;
+}
+section.about .wrapper {
+    margin-top: 200px;
+}
+section.about figure {
+    float: left;
+    width: 38%;
+    position: relative;
+    margin: 0;
+    padding: 25px;
+    background: white;
+}
+section.about figure img:first-child {
+    width: 100%;
+}
+section.about figure .stamp {
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+}
+section.about .description {
+    float: right;
+    width: calc(62% - 75px);
+    margin-left: 75px;
+}
+section.about .description > p {
+    margin: 70px 0;
+}
+section.about .author .name {
+    display: inline-block;
+    font-weight: bold;
+    color: #000;
+}
+section.about .author .profession {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Attractions Section Begins */
+section.attractions .left {
+    width: calc(60% - 200px);
+    float: left;
+    margin: 100px;
+}
+section.attractions ul {
+    float: right;
+}
+section.attractions li {
+    width: calc(50% - 100px);
+    float: left;
+    position: relative;
+    margin-left: 100px;
+    margin-bottom: 70px;
+}
+section.attractions li svg {
+   position: absolute;
+   top: 0;
+   left: -90px;
+   font-size: 3rem;
+}
+section.attractions .scenery {
+    width: 40%;
+    float: left;
+}
+section.attractions .scenery img {
+    width: 100%;
+}
+
+
+/* Testimonial Section Begins */
+section.testimonial {
+    background-color: #eeeeee;
+    clear: both;
+    text-align: center;
+    padding: 100px 0;
+}
+section.testimonial .wrapper {
+    background-color: white;
+    padding: 100px;
+    position: relative;
+}
+section.testimonial blockquote {
+    margin-top: 100px;
+}
+section.testimonial .stars {
+    margin: 20px 0;
+    font-size: 20px;
+    color: gold;
+}
+section.testimonial .author p {
+    display: inline-block;
+}
+section.testimonial .name {
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: bold;
+}
+section.testimonial .tripAdvisor {
+    color: #000;
+}
+section.testimonial .previous, 
+section.testimonial .next {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: #999999;
+}
+section.testimonial .previous {
+    left: -100px;
+}
+section.testimonial .next {
+    right: -100px;
+}
+
+
+/* Gallery Section Begins */
+section.explore {
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 150px;
+}
+
+section.explore .gallery img {
+    display: block;
+    width: calc(33.33% - 40px);
+    float: left;
+    margin: 20px;
+}
+
+
+/* Contact Section Begins */
+section.contact {
+    /* padding: 150px; */
+    text-align-last: left;
+}
+section.contact .information {
+    width: 40%;
+    float: left;
+    padding: 150px;
+}
+section.contact h2 {
+    margin-bottom: 100px;
+}
+section.contact h5 {
+    font-size: 3.2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+section.contact address {
+    margin: 25px 0;
+}
+section.contact address p {
+    font-style: normal;
+    line-height: 1.5;
+}
+section.contact .scenery {
+    width: 60%;
+    float: left;
+}
+section.contact .emailAddress .email {
+    color: #000;
+    float: left;
+}
+section.contact .emailAddress a {
+    float: left;
+    font-size: 1.4rem;
+}
+section.contact .callDirectly {
+    clear: both;
+    margin-top: 50px;
+    font-size: 1.8rem;
+}
+section.contact .callDirectly .directNumber {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+/* Footer Section Begins */
+footer {
+    clear: both;
+}
