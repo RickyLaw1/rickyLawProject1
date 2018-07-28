@@ -25,14 +25,15 @@ h1 {
 }
 h2 {
     font-size: 4.8rem;
+    font-weight: 600;
 }
 h3 {
     font-size: 1.6rem;
     color: #999999;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    font-weight: 400;
+    letter-spacing: 0.8rem;
+    font-weight: 600;
 }
 h4 {
     font-size: 1.8rem;
@@ -40,7 +41,7 @@ h4 {
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: #999999;
     line-height: 2.15;
@@ -66,17 +67,20 @@ blockquote {
 /* Header Section Begins */
 header .top {
     margin: 0 auto;
+    height: 15vh;
 }
 header .top .wrapper {
     position: relative;            
 }
 header h1 {
     text-align: center;
-    padding: 50px;
+    padding: 40px;
 }
 header nav {
     font-size: 1.4rem;
     width: 33.33%;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 header nav.left {
     float: left;
@@ -104,21 +108,27 @@ header nav.right li {
 header .shopping {
     position: relative;
 }
+header .fa-shopping-bag {
+    font-size: 2rem;
+}
+header .fa-search {
+    font-size: 2rem;
+}
 header .shopping .number {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     position: absolute;
     bottom: -10px;
     right: -10px;
-    padding: 2px;
-    width: 15px;
-    height: 15px;
+    padding: 4px;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
     display: block;
     text-align: center;
     background-color: #a5f1dd;
 }
 header .banner {
-    height: 100vh;
+    height: 85vh;
     background-image: url(../assets/home-1.jpeg);
     background-size: cover;
 }
@@ -130,34 +140,57 @@ header .banner {
 /* About Section Begins */
 section.about {
     background-color: #eeeeee;
-    padding: 200px;
+    padding: 229px;
+    
 }
 section.about .wrapper {
-    margin-top: 200px;
+    margin-top: 115px;
+}
+section.about .innerWrapper {
+    margin: 0 auto;
+    /* padding-right: 18%; */
+    /* padding-left: 10%; */
+}
+section.about .container {
+    float: left;
+    width: 50%;
+    margin: 0;
 }
 section.about figure {
-    float: left;
-    width: 38%;
-    position: relative;
+    width: 68%;
     margin: 0;
-    padding: 25px;
-    background: white;
+    float: right;
+    position: relative;
 }
 section.about figure img:first-child {
-    width: 100%;
+    padding: 15px;
+    background-color: white;
 }
 section.about figure .stamp {
     position: absolute;
-    bottom: -100px;
-    left: -100px;
+    bottom: -27%;
+    left: -27%;
 }
+/* section.about:hover .stamp {
+    transform: rotate(360deg);
+    transition: 120s;
+} */
 section.about .description {
-    float: right;
-    width: calc(62% - 75px);
-    margin-left: 75px;
+    float: left;
+    width: calc(50% - 75px);
+    margin-left: 1%;
+    padding: 51px 0;
+    padding-right: 5%;
+    position: relative;
+}
+section.about .line {
+    border: 1px solid #000;
+    position: absolute;
+    top: 0;
+    width: 75px;
 }
 section.about .description > p {
-    margin: 70px 0;
+    margin: 51px 0;
 }
 section.about .author .name {
     display: inline-block;
@@ -169,14 +202,19 @@ section.about .author .profession {
     margin-left: 10px;
 }
 
+
+
 /* Attractions Section Begins */
 section.attractions .left {
-    width: calc(60% - 200px);
+    width: 60%;
     float: left;
-    margin: 100px;
+    padding: 204px 2%;
+    /* margin: 100px; */
 }
 section.attractions ul {
     float: right;
+    width: 85%;
+    padding-right: 10%;
 }
 section.attractions li {
     width: calc(50% - 100px);
@@ -188,7 +226,7 @@ section.attractions li {
 section.attractions li svg {
    position: absolute;
    top: 0;
-   left: -90px;
+   left: -57px;
    font-size: 3rem;
 }
 section.attractions .scenery {
@@ -290,6 +328,9 @@ section.contact .scenery {
     width: 60%;
     float: left;
 }
+section.contact img {
+    display: block;
+}
 section.contact .emailAddress .email {
     color: #000;
     float: left;
@@ -314,6 +355,7 @@ footer {
     background-color: #212020;
     clear: both;
     color: #999999;
+    font-size: 1.3rem;
 }
 footer .top {
     padding: 50px 0;
