@@ -4,9 +4,10 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0;}
 
-/* General Styling */
+
+/*----------- General Styling -----------*/
 .wrapper {
-    max-width: 1335px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 html {
@@ -38,6 +39,7 @@ h3 {
 h4 {
     font-size: 1.8rem;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 p {
@@ -64,7 +66,7 @@ blockquote {
 }
 
 
-/* Header Section Begins */
+/*----------- Header Section Begins -----------*/
 header .top {
     margin: 0 auto;
     height: 15vh;
@@ -136,8 +138,7 @@ header .banner {
 
 
 /* Main Begins */
-
-/* About Section Begins */
+/*----------- About Section Begins -----------*/
 section.about {
     background-color: #eeeeee;
     padding: 229px;
@@ -204,16 +205,16 @@ section.about .author .profession {
 
 
 
-/* Attractions Section Begins */
+/*----------- Attractions Section Begins -----------*/
 section.attractions .left {
-    width: 60%;
+    width: 65%;
     float: left;
-    padding: 204px 2%;
+    padding: 180px 0;
     /* margin: 100px; */
 }
 section.attractions ul {
     float: right;
-    width: 85%;
+    width: 72%;
     padding-right: 10%;
 }
 section.attractions li {
@@ -221,29 +222,88 @@ section.attractions li {
     float: left;
     position: relative;
     margin-left: 100px;
-    margin-bottom: 70px;
+    margin-bottom: 58px;
+    line-height: 1.9rem;
+
+}
+section.attractions li:nth-child(5),
+section.attractions li:nth-child(6) {
+    margin-bottom: 0;
+}
+section.attractions li p {
+    margin-top: 10px;
 }
 section.attractions li svg {
    position: absolute;
    top: 0;
    left: -57px;
    font-size: 3rem;
+   color: #333333;
+}
+section.attractions .fa-plane {
+    transform: rotate(-45deg);
 }
 section.attractions .scenery {
-    width: 40%;
+    width: 35%;
     float: left;
 }
 section.attractions .scenery img {
     width: 100%;
 }
 
+/* Hover States */
+section.attractions li:hover p {
+    color: #212020;
+}
+section.attractions li:first-child:hover svg {
+    color: orange;
+    transform: rotate(360deg);
+    transition: transform 5s;
+}
+section.attractions li:nth-child(2):hover svg {
+    color: rgb(109, 109, 109);
+    transform: translateY(-5px);
+}
+section.attractions li:nth-child(2) svg {
+    transition: transform 0.25s;
+}
+section.attractions li:nth-child(3):hover svg {
+    color: rgb(0, 0, 0);
+    transform: translateY(-15px);
+}
+section.attractions li:nth-child(3) svg {
+    transition: transform 0.5s;
+}
+section.attractions li:nth-child(4):hover svg {
+    color: aquamarine;
+}
+section.attractions li:nth-child(4) svg {
+    transition: 0.5s;
+}
+section.attractions li:nth-child(5):hover svg {
+    color: chartreuse;
+}
+section.attractions li:nth-child(5) svg {
+    transition: 0.25s;
+}
+section.attractions li:nth-child(6):hover svg {
+    color: rgb(255, 191, 29);
+    transform: rotate(10deg)
+}
+section.attractions li:nth-child(6) svg {
+    transition: 0.25s;
+}
 
-/* Testimonial Section Begins */
+/*----------- Testimonial Section Begins -----------*/
 section.testimonial {
     background-color: #eeeeee;
     clear: both;
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 144px;
+}
+section.testimonial h2 {
+    font-size: 6rem;
+    margin-top: 44px;
 }
 section.testimonial .wrapper {
     background-color: white;
@@ -251,7 +311,17 @@ section.testimonial .wrapper {
     position: relative;
 }
 section.testimonial blockquote {
-    margin-top: 100px;
+    margin-top: 82px;
+    position: relative;
+}
+section.testimonial blockquote:before {
+    content: "“";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+section.testimonial blockquote:after {
+    content: "”";
 }
 section.testimonial .stars {
     margin: 20px 0;
@@ -282,15 +352,20 @@ section.testimonial .previous {
 section.testimonial .next {
     right: -100px;
 }
+section.testimonial .previousNext svg:hover {
+    color: #000;
+}
+section.testimonial .stars svg:hover {
+    transform:  scale(1.4);
+}
 
 
-/* Gallery Section Begins */
+/*----------- Gallery Section Begins -----------*/
 section.explore {
     background-color: #eeeeee;
     text-align: center;
-    padding: 150px;
+    padding-bottom: 131px;
 }
-
 section.explore .gallery img {
     display: block;
     width: calc(33.33% - 40px);
@@ -299,7 +374,8 @@ section.explore .gallery img {
 }
 
 
-/* Contact Section Begins */
+
+/*----------- Contact Section Begins -----------*/
 section.contact {
     /* padding: 150px; */
     text-align-last: left;
@@ -350,21 +426,31 @@ section.contact .callDirectly .directNumber {
     font-weight: bold;
 }
 
-/* Footer Section Begins */
+
+
+
+/*----------- Footer Section Begins -----------*/
 footer {
     background-color: #212020;
     clear: both;
     color: #999999;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 footer .top {
-    padding: 50px 0;
-    border-bottom: 1px solid #999999;
+    padding-top: 85px;
+    padding-bottom: 71px;
+    border-bottom: 1px solid #333333;
 }
-footer .top nav.left,
-footer .top nav.right, 
-footer .top form {
+footer .top nav.left {
     width: 33.33%;
+    float: left;
+}
+footer .top nav.right {
+    width: 27.1%;
+    float: left;
+}
+footer .top form {
+    width: 39.57%;
     float: left;
 }
 footer li {
@@ -375,19 +461,48 @@ footer .emailEntry {
 }
 footer form input {
     width: 100%;
+    margin-top: 17px;
     padding: 10px 0;
     font-size: 1.8rem;
     color: #999999;
     background-color: transparent;
     border: 1px solid transparent;
-    border-bottom: 1px solid #999999;
+    border-bottom: 2px solid #333333;
 }
-footer form svg {
+footer form input:focus {
+    outline: none;
+    border-bottom: 2px solid white;
+}
+footer form button {
     position: absolute;
     right: 0;
     top: 50%;
+    transform: translateY(-30%);
+    background: transparent;
+    border: 1px solid transparent;
+    color: white;
+    font-size: 1.8rem;
+    padding: 5px;
+}
+footer form button:hover, 
+footer form button:focus {
+    outline: none;
+    border: 1px solid #999999;
 }
 footer .bottom {
     clear: both;
-    padding: 30px 0;
+    padding-top: 30px;
+    padding-bottom: 39px;
+}
+footer .copyRight {
+    float: left;
+    color:  #666666;
+}
+footer .social {
+    float: right;
+    color: white;
+}
+footer .social svg {
+    margin-left: 50px;
+    font-size: 1.8rem;
 }
