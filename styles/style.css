@@ -129,16 +129,38 @@ header .shopping .number {
     background-color: #a5f1dd;
 }
 header .banner {
+    background-size: cover;
+    background-position: center;
+}
+header .banner1 {
     height: 85vh;
     background-image: url(../assets/home-1.jpeg);
-    background-size: cover;
 }
 header .banner2 {
     height: 85vh;
     background-image: url(../assets/blog-1.jpeg);
-    background-size: cover;
 }
-
+header .banner3 {
+    height: 50vh;
+    background-image: url(../assets/contact-1.jpeg);
+}
+section.banner4 {
+    height: 50vh;
+    background-image: url(../assets/contact-2.jpeg);
+}
+/*Header Hoverstates */
+header li:hover {
+    color: #999999;
+}
+header .shopping:hover svg,
+header .fa-search:hover {
+    transform: translateY(-5px);
+    color: #000;
+}
+header svg {
+    transition: 0.25s;
+    color: #000;
+}
 
 
 
@@ -180,7 +202,7 @@ section.about figure .stamp {
 section.about .description {
     float: left;
     width: calc(50% - 75px);
-    margin-left: 1%;
+    margin-left: 5%;
     padding: 51px 0;
     padding-right: 5%;
     position: relative;
@@ -316,9 +338,6 @@ section.testimonial blockquote {
 }
 section.testimonial blockquote:before {
     content: "“";
-    position: absolute;
-    left: 0;
-    top: 0;
 }
 section.testimonial blockquote:after {
     content: "”";
@@ -366,6 +385,9 @@ section.explore {
     text-align: center;
     padding-bottom: 131px;
 }
+section.explore h3{
+    margin-bottom: 41px;
+}
 section.explore .gallery img {
     display: block;
     width: calc(33.33% - 40px);
@@ -392,13 +414,13 @@ section.contact h5 {
     font-size: 3.2rem;
     font-family: 'Playfair Display', serif;
 }
-
 section.contact address {
     margin: 25px 0;
 }
 section.contact address p {
     font-style: normal;
     line-height: 1.5;
+    color: #666666;
 }
 section.contact .scenery {
     width: 60%;
@@ -407,28 +429,37 @@ section.contact .scenery {
 section.contact img {
     display: block;
 }
+section.contact .location .state {
+    color: #cccccc;
+}
 section.contact .emailAddress .email {
     color: #000;
+    font-weight: 600;
     float: left;
+    font-family: 'Playfair Display', serif;
 }
 section.contact .emailAddress a {
     float: left;
     font-size: 1.4rem;
+    padding-top: 7px;
+    margin-left: 7px;
 }
-section.contact .callDirectly {
+section.contact .callDirectly h6{
     clear: both;
     margin-top: 50px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    color: #999999;
 }
 section.contact .callDirectly .directNumber {
     font-size: 3.5rem;
     font-family: 'Playfair Display', serif;
-    font-weight: bold;
+    font-weight: 700;
 }
 
-/*----------------------  Blog Main Begins ---------------------- */
+/*----------------------  Blog Page Begins ---------------------- */
 main.siteBlog {
     background-color: #eeeeee;
+    padding-bottom: 75px;
 }
 main.siteBlog h2 {
     font-size: 3.6rem;
@@ -442,6 +473,7 @@ main.siteBlog .wrapper {
     padding: 75px 52px;
     position: relative;
     top: -75px;
+    max-width: 1270px;
 }
 
 /*----------- Blog Section Begins -----------*/
@@ -452,7 +484,7 @@ section.blog .webLocation {
     margin: 0 auto;
 }
 section.blog .webLocation {
-    width: 50%;
+    width: 45%;
     display: block;
     margin: 50px auto;
 }
@@ -468,7 +500,7 @@ section.blog .content {
     clear: both;
 }
 section.blog .content .top {
-    border-bottom: 1px solid #666666;
+    border-bottom: 1px solid #dcdcdc;
     padding: 39px 0;
 }
 section.blog .author,
@@ -520,7 +552,7 @@ section.relatedPosts {
 }
 section.relatedPosts h2 {
     padding-bottom: 30px;
-    border-bottom: 1px solid #666666;
+    border-bottom: 1px solid #dcdcdc;
 }
 section.relatedPosts .posts {
     margin-top: 55px;
@@ -529,10 +561,195 @@ section.relatedPosts article {
     width: calc(33.33% - 20px);
     float: left;
 }
-
 section.relatedPosts article:nth-child(2) {
     margin: 0 30px;
 }
+.relatedPosts .description {
+    padding-left: 28px;
+}
+section.relatedPosts .date {
+    margin: 24px 0;
+}
+section.relatedPosts h5 {
+    margin-bottom: 38px;
+}
+section.relatedPosts p {
+    color: #000;
+}
+
+/*----------- Comments Section Begins -----------*/
+section.comments h2 {
+    margin-top: 111px;
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dcdcdc;;
+}
+section.comments .comment1 {
+    margin-bottom: 28px;
+}
+section.comments .comment .profilePic,
+section.comments .comment .message {
+    float: left;
+}
+section.comments .comment .profilePic {
+    width: 10%;
+    margin: 0;
+}
+section.comments .message {
+    width: 90%;
+    background-color:  #f6f6f6;
+    padding: 21px 0 37px 28px;
+}
+section.comments .message .name,
+section.comments .message .reply {
+    float: left;
+}
+section.comments .message .name {
+    color: #000;
+}
+section.comments .message .reply {
+    font-style: italic;
+    color:  #33cccc;
+    font-weight: 500;
+}
+section.comments .message p:nth-child(3) {
+    clear: both;
+    color: #333333;
+    margin-bottom: 17px;
+}
+section.comments .message .time {
+    font-size: 1.3rem;
+    color: #999999;
+}
+
+
+/*----------- Leave a Comment Section Begins -----------*/
+section.leaveComment {
+    margin-top: 107px;
+    clear: both;
+}
+section.leaveComment h2 {
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 30px;
+    margin-bottom: 60px;
+    font-size: 3rem;
+}
+section.leaveComment .info input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    color: #000000;
+    width: calc(33.33% - 20px);
+    float: left;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 15px;
+}
+section.leaveComment .commentEntry input {
+    width: 100%;
+    padding-bottom: 100px;
+    margin-bottom: 60px;
+    margin-top: 43px;   
+}
+section.leaveComment form .info:nth-child(2) input {
+    margin: 0 30px;
+}
+section.leaveComment button {
+    background-color: transparent;
+    color: #84a016;
+    border: 1px solid #84a016;
+    width: 226px;
+    padding: 22px 37px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/* Input Focus Styling */
+section.leaveComment .info input:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+section.leaveComment .info input:focus::placeholder {
+    color: #000;
+}
+/* Hover States */
+section.leaveComment button:hover {
+    background-color: #84a016;
+    color: white;
+    border: 1px solid transparent;
+}
+
+/*----------------------  Contact Page Begins ---------------------- */
+main.contact {
+    padding: 146px 0 114px 0;
+}
+
+
+/*----------- Footer Section Begins -----------*/
+
+section.details h2 {
+    margin-bottom: 36px;
+
+}
+section.details h3 {
+   font-family: 'Playfair Display', serif;
+   color: #000;
+   text-align-last: left;
+   text-transform: capitalize;
+   letter-spacing: normal;
+   margin: 22px 0 16px 0;
+}
+section.details > p:first-of-type {
+    width: 50%;
+}
+section.details ul {
+    padding: 80px 0;
+}
+section.details li {
+    float: left;
+    width: 33.33%;
+    padding: 50px 0;
+    padding-left: 70px;
+}
+section.details li:nth-child(2) {
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+}
+section.details li svg {
+    font-size: 4rem;
+}
+section.details li p {
+    font-weight: 400;
+}
+
+/*----------- Get in Touch Section Begins -----------*/
+section.getInTouch h2 {
+    font-size: 4.8rem;
+    border: none;
+    margin-bottom: 30px;
+    padding: 0;
+}
+section.getInTouch p {
+    margin-bottom: 121px;
+}
+section.getInTouch button {
+    font-size: 1.4rem;
+    width: 130px;
+    padding: 0;
+    padding-bottom: 10px;
+    color: #999999;
+    background-color: transparent;
+    border-bottom: 1px solid #999999;
+}
+section.getInTouch button:hover {
+    color: #000;
+     border-bottom: 1px solid #000000;
+     cursor: pointer;
+}
+
 /*----------- Footer Section Begins -----------*/
 footer {
     background-color: #212020;
@@ -577,6 +794,12 @@ footer form input:focus {
     outline: none;
     border-bottom: 2px solid white;
 }
+footer form input:focus::placeholder {
+    color: #cccccc;
+}
+footer form input:focus + button {
+    color: white;
+}
 footer form button {
     position: absolute;
     right: 0;
@@ -584,14 +807,9 @@ footer form button {
     transform: translateY(-30%);
     background: transparent;
     border: 1px solid transparent;
-    color: white;
+    color: #999999;
     font-size: 1.8rem;
     padding: 5px;
-}
-footer form button:hover, 
-footer form button:focus {
-    outline: none;
-    border: 1px solid #999999;
 }
 footer .bottom {
     clear: both;
@@ -606,7 +824,37 @@ footer .social {
     float: right;
     color: white;
 }
-footer .social svg {
-    margin-left: 50px;
-    font-size: 1.8rem;
+footer .social a {
+    padding: 10px;
 }
+footer .social svg {
+    margin-left: 30px;
+    font-size: 1.8rem;
+    width: 30px;
+}
+/* Hover States */
+footer form button:hover, 
+footer form button:focus {
+    outline: none;
+    border: 1px solid #999999;
+    color: white;
+}
+footer nav a:hover,
+footer nav a:focus {
+    color: #eeeeee;
+}
+.fa-twitter:hover {
+    color: #00ccff;
+}
+.fa-facebook-f:hover {
+    background-color: #3b5998;
+    color: white;
+}
+.fa-instagram:hover, 
+.fa-instagram:focus {
+    color: #8a3ab9;
+}
+.fa-google-plus-g:hover {
+    color: #db3236;
+}
+
