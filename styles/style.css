@@ -149,7 +149,7 @@ section.banner4 {
     background-image: url(../assets/contact-2.jpeg);
 }
 /*Header Hoverstates */
-header li:hover {
+header li:not(.shopping):hover {
     color: #999999;
 }
 header .shopping:hover svg,
@@ -224,6 +224,14 @@ section.about .author .name {
 section.about .author .profession {
     display: inline-block;
     margin-left: 10px;
+}
+/* Hover States */
+section.about .innerWrapper:hover .description p:first-of-type {
+    color: #000;
+}
+section.about .innerWrapper:hover .stamp {
+    transform: rotate(360deg);
+    transition: 60s;
 }
 
 
@@ -364,6 +372,7 @@ section.testimonial .next {
     top: 50%;
     font-size: 40px;
     color: #999999;
+    cursor: pointer;
 }
 section.testimonial .previous {
     left: -100px;
@@ -371,6 +380,7 @@ section.testimonial .previous {
 section.testimonial .next {
     right: -100px;
 }
+/* Hover States */
 section.testimonial .previousNext svg:hover {
     color: #000;
 }
@@ -393,8 +403,12 @@ section.explore .gallery img {
     width: calc(33.33% - 40px);
     float: left;
     margin: 20px;
+    transition: 0.25s;
 }
-
+/* Hover States */
+section.explore .gallery img:hover {
+    transform: scale(1.2);
+}
 
 
 /*----------- Contact Section Begins -----------*/
@@ -560,9 +574,14 @@ section.relatedPosts .posts {
 section.relatedPosts article {
     width: calc(33.33% - 20px);
     float: left;
+    box-shadow: -1px 2px 3px 1px #f3f3f3;
+    transition: 0.25s;
 }
 section.relatedPosts article:nth-child(2) {
     margin: 0 30px;
+}
+section.relatedPosts article img {
+    transition: 0.25s;
 }
 .relatedPosts .description {
     padding-left: 28px;
@@ -573,9 +592,36 @@ section.relatedPosts .date {
 section.relatedPosts h5 {
     margin-bottom: 38px;
 }
-section.relatedPosts p {
+section.relatedPosts p:last-child {
+    color: #999999;
+    margin-bottom: 33px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+section.relatedPosts article svg {
+    transition: 0.25s;
+}
+/* Hover States */
+section.relatedPosts article:hover {
+    box-shadow: 0px 21px 25px -20px #989595;
+}
+section.relatedPosts article:hover h5 {
+    text-decoration: underline;
+}
+section.relatedPosts article:hover p {
     color: #000;
 }
+section.relatedPosts article a p:hover {
+    text-decoration: underline;
+}
+section.relatedPosts article a p:hover svg {
+    transform: translateX(7px);
+}
+section.relatedPosts article:hover img {
+    transform: scale(1.01);
+}
+
+
 
 /*----------- Comments Section Begins -----------*/
 section.comments h2 {
@@ -599,6 +645,17 @@ section.comments .message {
     width: 90%;
     background-color:  #f6f6f6;
     padding: 21px 0 37px 28px;
+    position: relative;
+}
+section.comments .message::before {
+    content: "";
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 15px solid #f6f6f6;
+    border-left: 5px solid transparent;
+    position: absolute;
+    left: -19px;
+    top: 21px;
 }
 section.comments .message .name,
 section.comments .message .reply {
@@ -634,7 +691,8 @@ section.leaveComment h2 {
     margin-bottom: 60px;
     font-size: 3rem;
 }
-section.leaveComment .info input {
+section.leaveComment .info input,
+section.leaveComment .commentEntry textarea {
     font-family: 'Poppins', sans-serif;
     font-size: 1.4rem;
     color: #000000;
@@ -644,7 +702,7 @@ section.leaveComment .info input {
     border-bottom: 1px solid #dcdcdc;
     padding-bottom: 15px;
 }
-section.leaveComment .commentEntry input {
+section.leaveComment .commentEntry textarea {
     width: 100%;
     padding-bottom: 100px;
     margin-bottom: 60px;
@@ -668,7 +726,8 @@ main.siteBlog section.leaveComment button {
     cursor: pointer;
 }
 /* Input Focus Styling */
-section.leaveComment .info input:focus {
+section.leaveComment .info input:focus,
+section.leaveComment .commentEntry textarea:focus {
     outline: none;
     border-bottom: 1px solid #000;
 }
@@ -676,7 +735,9 @@ section.leaveComment .info input:focus::placeholder {
     color: #000;
 }
 /* Hover States */
-main.blogSite section.leaveComment button:hover {
+main.siteBlog section.leaveComment button:hover,
+main.siteBlog section.leaveComment button:focus {
+    outline: none;
     background-color: #84a016;
     color: white;
     border: 1px solid transparent;
@@ -688,11 +749,9 @@ main.contact {
 }
 
 
-/*----------- Footer Section Begins -----------*/
-
+/*----------- Details Section Begins -----------*/
 section.details h2 {
     margin-bottom: 36px;
-
 }
 section.details h3 {
    font-family: 'Playfair Display', serif;
@@ -724,8 +783,50 @@ section.details li svg {
 section.details li p {
     font-weight: 400;
 }
+section.details .envelope {
+    position: relative;
+    display: inline-block;
+}
+section.details .envelope span {
+    text-align: center;
+    padding-top: 5px;
+    position: absolute;
+    width: 0.2px;
+    height: 0.0px;
+    border-radius: 50%;
+    background-color: tomato;
+    right: -10px;
+    top: -5px;
+    font-weight: 600;
+    color: white;
+}
+/* Hover States */
+section.details li:hover p {
+    color: #000;
+}
+section.details li:first-child:hover svg {
+    box-shadow: 0px 0px 35px 7px cyan;
+}
+section.details li svg {
+    transition: 0.25s;
+    box-shadow: 0px 0px 5px 1px transparent;
+}
+section.details li:nth-child(2):hover svg {
+    transform: translateY(-15px);
+    color: tomato;       
+}
+section.details li:last-child:hover svg {
+    color: gold;
+}
+section.details li:last-child:hover span {
+    width: 20px;
+    height: 20px;
+}
 
 /*----------- Get in Touch Section Begins -----------*/
+section.getInTouch {
+    margin-top: 0;
+}
 section.getInTouch h2 {
     font-size: 4.8rem;
     border: none;
@@ -748,10 +849,11 @@ section.getInTouch button {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
+/* Hover States */
 section.getInTouch button:hover {
     color: #000;
-     border-bottom: 1px solid #000000;
-     cursor: pointer;
+    border-bottom: 1px solid #000000;
+    cursor: pointer;
 }
 
 /*----------- Footer Section Begins -----------*/
