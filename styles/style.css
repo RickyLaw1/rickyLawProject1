@@ -653,7 +653,7 @@ section.leaveComment .commentEntry input {
 section.leaveComment form .info:nth-child(2) input {
     margin: 0 30px;
 }
-section.leaveComment button {
+main.siteBlog section.leaveComment button {
     background-color: transparent;
     color: #84a016;
     border: 1px solid #84a016;
@@ -676,7 +676,7 @@ section.leaveComment .info input:focus::placeholder {
     color: #000;
 }
 /* Hover States */
-section.leaveComment button:hover {
+main.blogSite section.leaveComment button:hover {
     background-color: #84a016;
     color: white;
     border: 1px solid transparent;
@@ -737,12 +737,16 @@ section.getInTouch p {
 }
 section.getInTouch button {
     font-size: 1.4rem;
-    width: 130px;
+    width: 109px;
     padding: 0;
     padding-bottom: 10px;
     color: #999999;
     background-color: transparent;
+    border: 1px solid transparent;
     border-bottom: 1px solid #999999;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 section.getInTouch button:hover {
     color: #000;
