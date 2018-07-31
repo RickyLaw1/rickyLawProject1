@@ -320,6 +320,7 @@ section.attractions li:nth-child(4) svg {
 }
 section.attractions li:nth-child(5):hover svg {
     color: chartreuse;
+    transform: rotateY(180deg);
 }
 section.attractions li:nth-child(5) svg {
     transition: 0.25s;
@@ -341,6 +342,8 @@ section.testimonial {
     text-align: center;
     padding: 100px 144px;
     position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 section.testimonial h2 {
     font-size: 6rem;
@@ -351,6 +354,13 @@ section.testimonial .wrapper {
     padding: 100px;
     /* position: relative; */
     box-shadow: -1px 2px 3px 1px #f3f3f3;
+    position: relative;
+    right: 0;
+}
+section.testimonial .testimonial2 {
+    position: absolute;
+    right: 100%;
+    top: 120px;
 }
 section.testimonial blockquote {
     margin-top: 82px;
@@ -385,6 +395,7 @@ section.testimonial .next {
     font-size: 40px;
     color: #999999;
     cursor: pointer;
+    z-index: 10;
 }
 section.testimonial .previous {
     left: 130px;
@@ -392,9 +403,31 @@ section.testimonial .previous {
 section.testimonial .next {
     right: 130px;
 }
+section.testimonial input[type="radio"] {
+    display: none;
+}
+section.testimonial input#next:checked  ~ .testimonial2 {
+    transition: 0.5s;
+    right: 50%;
+    transform: translateX(50%);
+}
+section.testimonial input#next:checked  ~ .testimonial1 {
+    position: relative;
+    transition: 0.5s;
+    right: -100%;
+}
+section.testimonial input#previous:checked  ~ .testimonial2 {
+    transition: 0.5s;
+    right: 100%;
+}
+section.testimonial input#previous:checked  ~ .testimonial1 {
+    position: relative;
+    transition: 0.5s;
+    right: 0;
+}
 
 /* Hover States */
-section.testimonial .previousNext svg:hover {
+section.testimonial svg:hover {
     color: #000;
 }
 section.testimonial .stars svg:hover {
@@ -407,6 +440,7 @@ section.testimonial .wrapper:hover {
 section.testimonial .wrapper:hover .stars svg {
     transform: rotate(360deg);
     transition: 10s;
+    background-color:gold;
 }
 
 
