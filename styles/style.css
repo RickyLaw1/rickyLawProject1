@@ -76,6 +76,8 @@ header .top .wrapper {
 header h1 {
     text-align: center;
     padding: 40px;
+    width: 300px;
+    margin: 0 auto;
 }
 header nav {
     font-size: 1.4rem;
@@ -149,6 +151,12 @@ section.banner4 {
     background-image: url(../assets/contact-2.jpeg);
 }
 /*Header Hoverstates */
+header h1:hover {
+    background: -webkit-linear-gradient( lightblue, rgb(0, 118, 253));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
 header li:not(.shopping):hover {
     color: #999999;
 }
@@ -325,11 +333,14 @@ section.attractions li:nth-child(6) svg {
 }
 
 /*----------- Testimonial Section Begins -----------*/
+.testimonialGallery {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url(../assets/swirl_pattern.png);
+}
 section.testimonial {
-    background-color: #eeeeee;
     clear: both;
     text-align: center;
     padding: 100px 144px;
+    position: relative;
 }
 section.testimonial h2 {
     font-size: 6rem;
@@ -338,7 +349,8 @@ section.testimonial h2 {
 section.testimonial .wrapper {
     background-color: white;
     padding: 100px;
-    position: relative;
+    /* position: relative; */
+    box-shadow: -1px 2px 3px 1px #f3f3f3;
 }
 section.testimonial blockquote {
     margin-top: 82px;
@@ -353,7 +365,7 @@ section.testimonial blockquote:after {
 section.testimonial .stars {
     margin: 20px 0;
     font-size: 20px;
-    color: gold;
+    color: goldenrod;
 }
 section.testimonial .author p {
     display: inline-block;
@@ -375,11 +387,12 @@ section.testimonial .next {
     cursor: pointer;
 }
 section.testimonial .previous {
-    left: -100px;
+    left: 130px;
 }
 section.testimonial .next {
-    right: -100px;
+    right: 130px;
 }
+
 /* Hover States */
 section.testimonial .previousNext svg:hover {
     color: #000;
@@ -387,11 +400,18 @@ section.testimonial .previousNext svg:hover {
 section.testimonial .stars svg:hover {
     transform:  scale(1.4);
 }
+section.testimonial .wrapper:hover {
+    box-shadow: 0px 21px 25px -20px #989595;
+    transform: scale(1.01);
+}
+section.testimonial .wrapper:hover .stars svg {
+    transform: rotate(360deg);
+    transition: 10s;
+}
 
 
 /*----------- Gallery Section Begins -----------*/
 section.explore {
-    background-color: #eeeeee;
     text-align: center;
     padding-bottom: 131px;
 }
@@ -603,7 +623,7 @@ section.relatedPosts article svg {
 }
 /* Hover States */
 section.relatedPosts article:hover {
-    box-shadow: 0px 21px 25px -20px #989595;
+    box-shadow: -6px 16px 50px -17px #989595;
 }
 section.relatedPosts article:hover h5 {
     text-decoration: underline;
@@ -617,7 +637,7 @@ section.relatedPosts article a p:hover {
 section.relatedPosts article a p:hover svg {
     transform: translateX(7px);
 }
-section.relatedPosts article:hover img {
+section.relatedPosts article:hover {
     transform: scale(1.01);
 }
 
