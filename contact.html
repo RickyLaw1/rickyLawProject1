@@ -92,18 +92,18 @@
         <section class="getInTouch leaveComment">
             <h2>Get in touch with us</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, asperiores.</p>
-            <form action="">
+            <form action="" method="POST" name="commentSubmission">
                 <div class="nameEntry info">
-                    <input type="name" placeholder="Enter your name...">
+                    <input type="name" placeholder="Enter your name..." name="name">
                 </div>
                 <div class="emailEntry info">
-                    <input type="email" placeholder="youremail@domain.com">
+                    <input type="email" placeholder="youremail@domain.com" name="email">
                 </div>
                 <div class="subjectEntry info">
-                    <input type="text" placeholder="Subject (Optional)">
+                    <input type="text" placeholder="Subject (Optional)" name="subject">
                 </div>
                 <div class="commentEntry info">
-                    <textarea placeholder="Here goes your comment"></textarea>
+                    <textarea placeholder="Here goes your comment" name="comment"></textarea>
                 </div>
             </form>
             <button>Send Message</button>

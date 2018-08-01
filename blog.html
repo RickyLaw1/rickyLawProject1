@@ -131,7 +131,7 @@
                 <h2>Related Posts</h2>
                 <div class="posts">
                     <article>
-                        <img src="assets/blog-3.jpeg" alt="">
+                        <img src="assets/blog-3.jpeg" alt="Airplane landing off the coast of the beautiful Sunshine Hotel">
                         <div class="description">
                             <p class="date">June, 24th, 2016</p>
                             <h5>Five reasons to stay at the beautiful Sunshine Hotel</h5>
@@ -143,7 +143,7 @@
                         </div>
                     </article>
                     <article>
-                        <img src="assets/blog-4.jpeg" alt="">
+                        <img src="assets/blog-4.jpeg" alt="Vacationer relaxing in the calm waters">
                         <div class="description">
                             <p class="date">April, 24, 2016</p>
                             <h5>Experience romantic space just have only at Sunshine hotel</h5>
@@ -155,7 +155,7 @@
                         </div>
                     </article>
                     <article>
-                        <img src="assets/blog-5.jpeg" alt="">
+                        <img src="assets/blog-5.jpeg" alt="Bright open design of hotel exterior">
                         <div class="description">
                             <p class="date">May, 08th, 2016</p>
                             <h5>Discover activities intered in Sunshine Hotel</h5>
@@ -172,22 +172,22 @@
                 <h2>02 Comments</h2>
                 <div class="comment1 comment clearfix">
                     <figure class="profilePic">
-                        <img src="assets/blog-6.jpeg" alt="">
+                        <img src="assets/blog-6.jpeg" alt="Display picture of Daniel Vandaft">
                     </figure>
                     <div class="message">
                         <p class="name">Daniel Vandaft - </p>
-                        <p class="reply">Reply</p>
+                        <a href="#" class="reply">Reply</a>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos quasi nisi fugiat autem, libero id!</p>
                         <div class="time">Jul, 17, 2015 at 15 hours ago</div>
                     </div>
                 </div>
                 <div class="comment2 comment">
                     <figure class="profilePic">
-                        <img src="assets/blog-7.jpeg" alt="">
+                        <img src="assets/blog-7.jpeg" alt="Display picture of Jenifer Loopz">
                     </figure>
                     <div class="message">
                         <p class="name">Jenifer Loopz - </p>
-                        <p class="reply">Reply</p>
+                        <a href="#" class="reply">Reply</a>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam deserunt, explicabo inventore nesciunt
                             aut itaque.</p>
                         <div class="time">Jul, 17, 2015 at 15 hours ago</div>
@@ -197,19 +197,18 @@
 
             <section class="leaveComment">
                 <h2>Leave A Comment</h2>
-                <form action="">
+                <form action="" method="POST" name="commentSubmission">
                     <div class="nameEntry info">
-                        <input type="name" placeholder="Enter your name...">
+                        <input type="name" placeholder="Enter your name..." name="name">
                     </div>
                     <div class="emailEntry info">
-                        <input type="email" placeholder="youremail@domain.com">
+                        <input type="email" placeholder="youremail@domain.com" name="email">
                     </div>
                     <div class="subjectEntry info">
-                        <input type="text" placeholder="Subject (Optional)">
+                        <input type="text" placeholder="Subject (Optional)" name="subject">
                     </div>
                     <div class="commentEntry info">
-                        <textarea placeholder="Here goes your comment"></textarea>
-
+                        <textarea placeholder="Here goes your comment" name="comment"></textarea>
                     </div>
                 </form>
                 <button>Send Messenger</button>

@@ -360,7 +360,8 @@ section.testimonial .wrapper {
 section.testimonial .testimonial2 {
     position: absolute;
     right: 100%;
-    top: 120px;
+    top: 100px;
+    width: 70%;
 }
 section.testimonial blockquote {
     margin-top: 82px;
@@ -439,8 +440,7 @@ section.testimonial .wrapper:hover {
 }
 section.testimonial .wrapper:hover .stars svg {
     transform: rotate(360deg);
-    transition: 10s;
-    background-color:gold;
+    transition: 7s;
 }
 
 
@@ -461,7 +461,8 @@ section.explore .gallery img {
 }
 /* Hover States */
 section.explore .gallery img:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 
@@ -613,6 +614,7 @@ section.blog .social svg {
     margin-left: 20px;
 }
 
+
 /*----------- Related Posts Section Begins -----------*/
 section.relatedPosts {
     margin-top: 115px;
@@ -722,6 +724,9 @@ section.comments .message .reply {
     font-style: italic;
     color:  #33cccc;
     font-weight: 500;
+    font-size: 1.4rem;
+    padding-top: 5px;
+    transition: 0.3s;
 }
 section.comments .message p:nth-child(3) {
     clear: both;
@@ -731,6 +736,14 @@ section.comments .message p:nth-child(3) {
 section.comments .message .time {
     font-size: 1.3rem;
     color: #999999;
+}
+/* Hover States */
+section.comments .message:hover .reply{
+    transform: translateX(10px);
+    font-weight: 600;
+}
+section.comments .reply:hover {
+    text-decoration: underline;
 }
 
 
@@ -761,6 +774,7 @@ section.leaveComment .commentEntry textarea {
     padding-bottom: 100px;
     margin-bottom: 60px;
     margin-top: 43px;   
+    resize: none;
 }
 section.leaveComment form .info:nth-child(2) input {
     margin: 0 30px;
